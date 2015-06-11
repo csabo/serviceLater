@@ -1,0 +1,25 @@
+{
+	
+  "name": "ServiceNowKeepAlive",
+  "version": "0.1",
+  "manifest_version": 2,
+  
+  "description": "ServiceNow Keep-alive",
+  "icons": {"32": "icon.png"},
+  
+  "page_action": {
+    "default_icon": 
+		{"32": "icon.png"},
+	"default_title":"Service-Now",
+    "default_popup": "popup.html"
+  },
+  
+  "background_page": "background.html",
+  "content_scripts": [
+		{
+		  "matches": ["your-serviceNow-URL-Here"],
+		  "js": ["contentscript.js"],
+		  "include_globs": ["*"]
+		}	
+    ]
+}
